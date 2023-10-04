@@ -1,5 +1,24 @@
-## Catalyst Image
-For testing purposes, we have created a Catalyst docker image with the latest version of Catalyst preinstalled. To run the container locally perform the following:
+## Catalyst Docker Image for Development
+### Introduction
+For testing and development purposes, we have created a Docker image with the latest version of Catalyst pre-installed. Running Catalyst in a Docker container offers two main advantages:
+
+1) Portability: The container can be easily shared and deployed across different systems.
+2) Quick Setup: Eliminates the time-consuming process of manually installing Catalyst and its dependencies.
+
+## Update:
+Added the docker file so all one has to do is pull the repo and run:
+```bash
+$ docker-compose up --build
+```
+>Also, added volumes to the container so ann app created will persist. Once the container is built and running, enter the containers terminal and run:
+ ```bash
+ $ catalyst.pl <app-name>
+ $ cd <YOUR APP NAME>
+ $ script/yourappname_server.pl -r
+ ```
+
+You should now have a running server on localhost:3000/
+
 - Ensure docker and docker-compose are installed.
 - pull the image from docker hub
  ```bash

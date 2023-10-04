@@ -1,10 +1,12 @@
 version: '3'
 services:
   web:
-    image: ababcock01/catalyst-5.9:latest
+    build: .
     platform: linux/amd64
     command: /bin/bash
     stdin_open: true
     tty: true
+    volumes:
+      - ./:/app
     ports:
       - "3000:3000"
